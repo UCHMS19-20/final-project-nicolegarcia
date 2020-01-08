@@ -22,20 +22,20 @@ class PyManMain:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     sys.exit()
-            self.snake_sprites.draw(self.screen)
+            self.pacman_sprites.draw(self.screen)
             pygame.display.flip()
             
     def LoadSprites(self):
         """Load the sprites that we need"""
-        self.pacman = Pacman()
+        self.pacman = pacman()
         self.pacman_sprites = pygame.sprite.RenderPlain((self.pacman))
-
-MainWindow = PyManMain()
-MainWindow.MainLoop()
 
 class Pacman(pygame.sprite.Sprite):
     """This is our Pacman that will move around the screen"""
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image, self.rect = load_image(pacman.jpg,-1)
+        self.image = pygame.image.load("src/img/pacman.jpg")
         self.pellets = 0
+
+MainWindow = PyManMain()
+MainWindow.MainLoop()
