@@ -57,7 +57,8 @@ for i in range(15):
     snake_segments.append(segment)
     allspriteslist.add(segment)
  
- 
+# snake_segments[0] = head of snake 
+
 clock = pygame.time.Clock()
 done = False
  
@@ -65,7 +66,7 @@ while not done:
     # Clear screen
     screen.fill(BLACK)
      # Draw apple
-    print(apple_rect)
+    
     pygame.draw.rect(screen, (255,0,0), apple_rect)
 
     for event in pygame.event.get():
@@ -87,11 +88,15 @@ while not done:
             if event.key == pygame.K_DOWN:
                 x_change = 0
                 y_change = (segment_height + segment_margin)
-            if event.key == pygame.K_SPACE:
-                apple_rect.x = random.randrange(1,70)*10
-                apple_rect.y = random.randrange(1,50)*10
+            # if event.key == pygame.K_SPACE:
+            #     apple_rect.x = random.randrange(1,70)*10
+            #     apple_rect.y = random.randrange(1,50)*10
 
- 
+        if snake_segments[0].rect.colliderect(apple_rect):
+            print("HIT")
+            apple_rect.x = random.randrange(1,70)*10
+            apple_rect.y = random.randrange(1,50)*10
+
     # Get rid of last segment of the snake
     # .pop() command removes last item in list
     old_segment = snake_segments.pop()
@@ -112,7 +117,7 @@ while not done:
    
     
     allspriteslist.draw(screen)
- 
+    pygame.draw.rect(screen, (0,200,255), snake_segments[0].rect)
     # Flip screen
     pygame.display.flip()
  
