@@ -1,12 +1,13 @@
 import pygame
 import os
 import sys
+import random
 
 # Colors
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
  
-# Set the width and height of each snake segment
+# Sets width and height of each snake segment
 segment_width = 15
 segment_height = 15
 # Margin between each segment
@@ -19,7 +20,6 @@ y_change = 0
  
 class Segment(pygame.sprite.Sprite):
     """ Class to represent one segment of the snake. """
-    # -- Methods
     # Constructor function
     def __init__(self, x, y):
         # Call the parent's constructor
@@ -29,7 +29,7 @@ class Segment(pygame.sprite.Sprite):
         self.image = pygame.Surface([segment_width, segment_height])
         self.image.fill(WHITE)
  
-        # Make our top-left corner the passed-in location.
+        # Make top-left corner the passed-in location.
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
@@ -44,7 +44,10 @@ screen = pygame.display.set_mode([800, 600])
 pygame.display.set_caption('Snake Game')
  
 allspriteslist = pygame.sprite.Group()
- 
+apple_image = pygame.image.load('src/img/apple.png') 
+apple_position = (random.randrange(1,70)*10,random.randrange(1,50)*10)
+apple_rect = pygame.Rect(apple_position, (20, 20))
+
 # Create an initial snake
 snake_segments = []
 for i in range(15):
@@ -59,7 +62,12 @@ clock = pygame.time.Clock()
 done = False
  
 while not done:
- 
+    # Clear screen
+    screen.fill(BLACK)
+     # Draw apple
+    print(apple_rect)
+    pygame.draw.rect(screen, (255,0,0), apple_rect)
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             done = True
@@ -79,6 +87,10 @@ while not done:
             if event.key == pygame.K_DOWN:
                 x_change = 0
                 y_change = (segment_height + segment_margin)
+            if event.key == pygame.K_SPACE:
+                apple_rect.x = random.randrange(1,70)*10
+                apple_rect.y = random.randrange(1,50)*10
+
  
     # Get rid of last segment of the snake
     # .pop() command removes last item in list
@@ -94,10 +106,11 @@ while not done:
     snake_segments.insert(0, segment)
     allspriteslist.add(segment)
  
-    # -- Draw everything
-    # Clear screen
-    screen.fill(BLACK)
- 
+    # Draw apple
+    
+    # screen.blit(apple_image, apple_rect)
+   
+    
     allspriteslist.draw(screen)
  
     # Flip screen
