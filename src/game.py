@@ -92,10 +92,6 @@ while not done:
             #     apple_rect.x = random.randrange(1,70)*10
             #     apple_rect.y = random.randrange(1,50)*10
 
-        if snake_segments[0].rect.colliderect(apple_rect):
-            print("HIT")
-            apple_rect.x = random.randrange(1,70)*10
-            apple_rect.y = random.randrange(1,50)*10
 
     # Get rid of last segment of the snake
     # .pop() command removes last item in list
@@ -118,6 +114,11 @@ while not done:
     
     allspriteslist.draw(screen)
     pygame.draw.rect(screen, (0,200,255), snake_segments[0].rect)
+
+    if snake_segments[0].rect.colliderect(apple_rect):
+        print("HIT")
+        apple_rect.x = random.randrange(1,70)*10
+        apple_rect.y = random.randrange(1,50)*10
     # Flip screen
     pygame.display.flip()
  
