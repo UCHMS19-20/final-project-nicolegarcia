@@ -65,8 +65,8 @@ done = False
 while not done:
     # Clear screen
     screen.fill(BLACK)
-     # Draw apple
     
+    # Draw apple
     pygame.draw.rect(screen, (255,0,0), apple_rect)
 
     for event in pygame.event.get():
@@ -102,23 +102,24 @@ while not done:
     x = snake_segments[0].rect.x + x_change
     y = snake_segments[0].rect.y + y_change
     segment = Segment(x, y)
- 
+    
     # Insert new segment into the list
     snake_segments.insert(0, segment)
     allspriteslist.add(segment)
  
-    # Draw apple
-    
-    # screen.blit(apple_image, apple_rect)
-   
-    
+    # Draw Screen
     allspriteslist.draw(screen)
+
+    # Make head of snake a blue color
     pygame.draw.rect(screen, (0,200,255), snake_segments[0].rect)
 
+    # Detect when collisions with apple occur
+    # Change position of apple and increase size of snake when a collision occurs
     if snake_segments[0].rect.colliderect(apple_rect):
-        print("HIT")
         apple_rect.x = random.randrange(1,70)*10
         apple_rect.y = random.randrange(1,50)*10
+        snake_segments.append(segment)
+
     # Flip screen
     pygame.display.flip()
  
