@@ -5,7 +5,7 @@ import random
 
 # Colors
 BLACK = (0, 0, 0)
-WHITE = (255, 255, 255)
+GREEN = (0, 255, 0)
  
 # Sets width and height of each snake segment
 segment_width = 15
@@ -25,9 +25,9 @@ class Segment(pygame.sprite.Sprite):
         # Call the parent's constructor
         super().__init__()
  
-        # Set height, width
+        # Set height, width, and color
         self.image = pygame.Surface([segment_width, segment_height])
-        self.image.fill(WHITE)
+        self.image.fill(GREEN)
  
         # Make top-left corner the passed-in location.
         self.rect = self.image.get_rect()
@@ -57,7 +57,7 @@ for i in range(15):
     snake_segments.append(segment)
     allspriteslist.add(segment)
  
-# snake_segments[0] = head of snake 
+# Note: snake_segments[0] = head of snake 
 
 clock = pygame.time.Clock()
 done = False
@@ -88,10 +88,6 @@ while not done:
             if event.key == pygame.K_DOWN:
                 x_change = 0
                 y_change = (segment_height + segment_margin)
-            # if event.key == pygame.K_SPACE:
-            #     apple_rect.x = random.randrange(1,70)*10
-            #     apple_rect.y = random.randrange(1,50)*10
-
 
     # Get rid of last segment of the snake
     # .pop() command removes last item in list
@@ -111,7 +107,7 @@ while not done:
     allspriteslist.draw(screen)
 
     # Make head of snake a blue color
-    pygame.draw.rect(screen, (0,200,255), snake_segments[0].rect)
+    pygame.draw.rect(screen, (12,113,255), snake_segments[0].rect)
 
     # Detect when collisions with apple occur
     # Change position of apple and increase size of snake when a collision occurs
