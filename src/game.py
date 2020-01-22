@@ -116,6 +116,16 @@ while not done:
         apple_rect.y = random.randrange(1,50)*10
         snake_segments.append(segment)
 
+    # Snake appears on opposite side of screen if it passes screen boundaries
+    if snake_segments[0].rect.x > 800:
+        snake_segments[0].rect.x = 0
+    if snake_segments[0].rect.x < 0:
+        snake_segments[0].rect.x = 800
+    if snake_segments[0].rect.y > 600:
+        snake_segments[0].rect.y = 0
+    if snake_segments[0].rect.y < 0:
+        snake_segments[0].rect.y = 600
+
     # Flip screen
     pygame.display.flip()
  
