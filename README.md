@@ -4,7 +4,17 @@ Everyone loves classic games so you're bound to enjoy this charming rendition of
 
 ## How to Play
 
-Playing Snake is simple: use the arrow keys to control the direction your snake moves. Move the snake so that it collides with the apple in order to "eat" it and grows. 
+Playing Snake is simple: use the arrow keys to control the direction your snake moves. Move the snake to eat the red apple and grow!
+
+## Presentation
+The game presentation can be found using the link below:
+
+https://docs.google.com/presentation/d/1t89nUhnXaa0iOD_Pl7kAjvJXj67M9UNN5mQHTGpGJ1A/edit?usp=sharing
+
+## Flowchart
+The flowchart can be found using the link below:
+
+https://drive.google.com/file/d/1XaNu2PVW4axvo8x4nzTk_t8GdsM6KhYI/view?usp=sharing
 
 ## Sources
 
@@ -16,12 +26,3 @@ Fincher, Jon. “PyGame: A Primer on Game Programming in Python.” Real Python 
 
 “Snake with Pygame.” Python Tutorials, Pythonspot, 16 Apr. 2015,                pythonspot.com/snake-with-pygame/.
 
-## Presentation
-The game presentation can be found using the link below:
-
-https://docs.google.com/presentation/d/1t89nUhnXaa0iOD_Pl7kAjvJXj67M9UNN5mQHTGpGJ1A/edit?usp=sharing
-
-### Flowchart
-The flowchart can be found using the link below:
-
-https://drive.google.com/file/d/1XaNu2PVW4axvo8x4nzTk_t8GdsM6KhYI/view?usp=sharing
