@@ -8,43 +8,20 @@ Playing Snake is simple: use the arrow keys to control the direction your snake 
 
 ## Sources
 
-Excellent work will include:
+Fincher, Jon. “PyGame: A Primer on Game Programming in Python.” Real Python     Real Python, 16 Sept. 2019, realpython.com/pygame-a-primer/.
 
-* Clean, well-written, effective code
-* Version control in Git
-* Clear documentation of how te code works
-* A presentation of the game and of the process of creating it
-* Citations (MLA format) of the resources you used.
+“Pygame Tutorial #7 - Collision and Hit Boxes.” YouTube, Tech With Tim, 23      Feb. 2018, www.youtube.com/watch?v=1aGuhUFwvXA.
 
-## Expectations
+“Snake Game Python Tutorial.” YouTube, FreeCodeCamp.org, 31 Oct. 2018,          www.youtube.com/watch?v=CD4qAhfFuLo.
 
-### General
+“Snake with Pygame.” Python Tutorials, Pythonspot, 16 Apr. 2015,                pythonspot.com/snake-with-pygame/.
 
-* This is intended as an individual project. You may help each other, but you are responsible for your own work.
-* I am willing to consider partnerships for larger and more complex projects
-* You may (and are encouraged to) use resources you find online, but may not outright copy someone else's work and must credit your sources
-* Your work should challenge you but be achievable
-* You are expected to understand how your own code works. If you are not able to explain any part of your own code, that will be cause for concern
+## Presentation
+The game presentation can be found using the link below:
 
-### Code
+https://docs.google.com/presentation/d/1t89nUhnXaa0iOD_Pl7kAjvJXj67M9UNN5mQHTGpGJ1A/edit?usp=sharing
 
-* Your code should make effective use of classes and/or functions. We will review in class
-* Your code should be clear and well documented with comments and appropriate naming schemes
-* Your code should be managed through Git. I will be expecting to see commits reflecting your progress as you work on the project, and would prefer to see feature branches and a stable master branch.
-* Your code should be as reliable and as free of bugs as you can manage
+### Flowchart
+The flowchart can be found using the link below:
 
-## Timeline
-
-Date  | Checkpoint
-------|---------------------------------------------
-12/16 | Project Proposals Due (all classes)
-12/20 | Git repository setup check
-1/7   | First code checkpoint
-1/13  | Second code checkpoint
-1/17  | Third code checkpoint
-1/23  | Exams Begin. All code and documentation due
-
-## Links
-
-* [Documentation](documentation.md)
-* [Resources](resources.md)
+https://drive.google.com/file/d/1XaNu2PVW4axvo8x4nzTk_t8GdsM6KhYI/view?usp=sharing
